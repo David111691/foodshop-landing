@@ -677,5 +677,19 @@
         </nav>
       </div>
     </footer>
+    <script>
+      const btn = document.querySelector(".btn-mobile-nav");
+      const nav = document.querySelector(".main-nav");
+
+      btn.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("nav-open");
+
+        if (isOpen) {
+          document.documentElement.classList.add("no-scroll");
+        } else {
+          document.documentElement.classList.remove("no-scroll");
+        }
+      });
+    </script>
   </body>
 </html>
